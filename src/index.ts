@@ -13,7 +13,8 @@ const app = express();
 app.use(clerkMiddleware());
 // Middleware to parse the JSON data in the request body
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({ origin: "https://laundryexpress25.netlify.app" }));
 
 connectDB();
 
